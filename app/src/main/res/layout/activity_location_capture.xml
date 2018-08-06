@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/RelativeGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content" >
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/listview"
+            android:drawSelectorOnTop="false"
+            />
+
+        <GridView
+            android:id="@+id/gridviewimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:numColumns="2"
+            android:layout_weight="1"
+            android:scrollbarStyle="outsideInset"
+            android:smoothScrollbar="true"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:paddingBottom="50dp"
+            android:paddingTop="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:layout_above="@+id/lat"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/capture_btn1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/side_nav_bar"
+            android:layout_centerHorizontal="true"
+            android:text="Camera" />
+        <Button
+            android:id="@+id/cap_location"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/side_nav_bar"
+            android:layout_centerHorizontal="true"
+            android:text="cap_Loc" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/side_nav_bar"
+            android:id="@+id/submit"
+            android:text="submit"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lat"/>
+
+</RelativeLayout>
